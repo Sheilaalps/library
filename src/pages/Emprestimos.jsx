@@ -23,4 +23,4 @@ function Emprestimos() {
   );
 }
 
-export default Emprestimos;
+export default Emprestimos
