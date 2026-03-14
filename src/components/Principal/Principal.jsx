@@ -1,7 +1,7 @@
 import React from "react";
 import "./Principal.css";
 import FormUsuario from "../FormUsuario/FormUsuario";
-import DelUsuario from "../../DelUsuario";
+import DelUsuario from "../DelUsuario/DelUsuario";
 
 function Principal() {
   return (
@@ -23,7 +23,7 @@ function Principal() {
         </div>
       </section>
 
-      {/* 👇 AREA PARA EXCLUIR USUARIO */}
+      {/* AREA PARA EXCLUIR USUARIO */}
       <section style={{ padding: "40px", textAlign: "center" }}>
         <DelUsuario />
       </section>
