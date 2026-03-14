@@ -1,0 +1,79 @@
+/* O container que controla o layout */
+.form-usuario {
+   background: rgba(255, 255, 255, 0.2);
+  /* Efeito de desfoque (O "Liquid" do glass) */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* Borda sutil e arredondada */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* Sombras para dar profundidade */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  gap: 0.5rem;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    margin: 50px auto;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+/* O estilo dos campos */
+.input-field {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* O estilo do botão */
+.botao-cadastrar {
+    padding: 12px;
+    background-color: #345e80;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.botao-cadastrar:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo do balão/Toast */
+.toast {
+  position: absolute;
+  bottom: 10px;       /* começa próximo ao botão */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  animation: subir 3s forwards; /* animação de subir e sumir */
+}
+
+/* Keyframes da animação */
+@keyframes subir {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0px);
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+    transform: translate(-50%, -50px);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -70px);
+  }
+}

@@ -1,0 +1,103 @@
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 550px; /* Define uma altura fixa para a imagem aparecer */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-around; /* Separa o texto do formulário */
+    overflow: hidden;
+    background-color: #000; /* Fundo preto preventivo */
+}
+
+.bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a foto preencha tudo sem esticar */
+    opacity: 0.6; /* Escurece a imagem para o texto branco aparecer */
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 10; /* Garante que o conteúdo fique na frente da imagem */
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+    color: white; /* Cor do texto "Bem-vindo" */
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra para ler melhor */
+}
+/* Container que segura o título e todos os cards */
+.cards-section {
+    padding: 60px 20px;
+    background-color: #f4f7f9; /* Um fundo cinza bem clarinho */
+    text-align: center;
+}
+
+.cards-section h2 {
+    margin-bottom: 40px;
+    color: #345e80; /* Azul do seu header */
+    font-size: 2rem;
+}
+
+/* O SEGREDO: Grid para colocar um ao lado do outro */
+.cards-grid {
+    display: grid;
+    /* Cria 3 colunas no PC e ajusta sozinho para o celular */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px; /* Espaço entre as caixinhas */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo de cada "caixinha" individual */
+.card-item {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra suave */
+    transition: transform 0.3s ease;
+    border-top: 5px solid #345e80; /* Detalhe azul no topo */
+}
+
+.card-item:hover {
+    transform: translateY(-10px); /* Efeito de flutuar ao passar o mouse */
+}
+
+.card-item h3 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.card-item p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilo do botão "Saiba mais" */
+.btn-saiba-mais {
+    padding: 10px 20px;
+    background-color: #345e80;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-saiba-mais:hover {
+    background-color: #264661;
+}
