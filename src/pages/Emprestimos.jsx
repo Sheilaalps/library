@@ -12,7 +12,7 @@ function Emprestimos() {
     <div>
       <h1>Lista de Empréstimos</h1>
 
-      {emprestimos.map((e) => (
+      {emprestimos.map ((e) => (
         <div key={e.id}>
           <p>Usuário: {e.usuario.nome}</p>
           <p>Livro: {e.livro.titulo}</p>
@@ -20,7 +20,7 @@ function Emprestimos() {
         </div>
       ))}
     </div>
-  );
+  )
 }
 
-export default Emprestimos
+export default Emprestimos;
