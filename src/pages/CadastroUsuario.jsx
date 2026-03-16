@@ -7,7 +7,7 @@ export default function CadastroUsuario() {
   return (
     <div className="login-container">
       <div className="login-card">
-        <h1>Entrar na Biblioteca</h1>
+        <h1>Cadastre-se abaixo:</h1>
         {/* 2. Agora o componente vai funcionar porque foi importado acima */}
         <FormUsuario />
       </div>

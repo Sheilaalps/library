@@ -1,80 +1,48 @@
-/* Container principal da página */
 .secao-livros {
-  padding: 40px 20px;
+  padding: 60px 5%;
   background-color: #f9f9f9;
-  min-height: 80vh;
   text-align: center;
 }
 
 .secao-livros h2 {
   margin-bottom: 40px;
-  font-family: sans-serif;
   color: #333;
 }
 
-/* Grid que segura os cards lado a lado */
-.container-cards {
-  display: flex;
-  flex-wrap: wrap; /* Faz pular linha se não couber */
-  justify-content: center;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Estilo de cada Card individual */
+/* Garante que o card ocupe o espaço do slide */
 .card-livro {
-  background: #fff;
+  background: white;
   border-radius: 12px;
-  width: 260px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-  overflow: hidden; /* Garante que a imagem não saia das bordas arredondadas */
-  border: 1px solid #eee;
+  padding-bottom: 20px;
+  margin-bottom: 40px; /* Espaço para as bolinhas da paginação */
+  transition: 0.3s;
 }
 
-.card-livro:hover {
-  transform: translateY(-10px); /* Efeito de flutuar ao passar o mouse */
-}
-
-/* Ajuste da Imagem da Capa */
-.card-livro img {
+.capa-livro {
   width: 100%;
-  height: 320px;
-  object-fit: cover; /* Faz a capa preencher o espaço sem distorcer */
-  background-color: #eee; /* Cor de fundo caso a imagem falhe */
+  height: 350px;
+  object-fit: contain; /* Não corta a capa do livro */
+  background-color: #eee;
+  border-radius: 12px 12px 0 0;
 }
 
-.card-info {
-  padding: 20px;
-  text-align: left;
+/* Cor das setinhas para combinar com seu site */
+.swiper-button-next, .swiper-button-prev {
+  color: #345e80 !important;
 }
 
-.card-info h3 {
-  margin: 0 0 10px 0;
-  font-size: 1.2rem;
-  color: #2c3e50;
+/* Cor das bolinhas embaixo */
+.swiper-pagination-bullet-active {
+  background: #345e80 !important;
 }
-
-.card-info p {
-  color: #666;
-  font-size: 0.9rem;
-  margin-bottom: 20px;
-}
-
-/* Botão de Ação */
 .btn-acessar {
-  width: 100%;
-  background-color: #2c3e50; /* Mesmo tom do seu Header */
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #345e80;
   color: white;
   border: none;
-  padding: 12px;
-  border-radius: 6px;
-  font-weight: bold;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
-}
-
-.btn-acessar:hover {
-  background-color: #34495e;
+  font-weight: bold;
 }

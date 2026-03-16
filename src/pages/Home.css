@@ -1,0 +1,63 @@
+.banner {
+  display: flex;               
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 80px;
+  background-image: url("/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  gap: 40px;               /* espaço entre texto e formulário */
+  flex-wrap: nowrap;        /* não quebra em telas grandes */
+}
+
+/* Texto do banner */
+.banner-text {
+  flex: 1;                  /* ocupa o espaço disponível, mas limitado pelo max-width */
+  max-width: 50%;            /* não ultrapassa metade do banner */
+}
+
+/* Caixa do formulário */
+.form-cadastro-home {
+  flex-shrink: 0;           /* não encolhe para caber */
+  width: 320px;             /* largura fixa */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  /* efeito vidro */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);.banner {
+  display: flex;               
+  justify-content: center; /* Mudei para center para eles ficarem mais unidos no meio */
+  align-items: center;
+  min-height: 100vh;
+  padding: 80px;
+  background-image: url("/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  gap: 80px;               /* Aumentei o espaço para ficar mais elegante */
+  flex-wrap: nowrap;
+}
+
+/* Texto do banner */
+.banner-text {
+  flex: 1;
+  max-width: 500px; /* Um valor fixo em px ajuda a controlar melhor que o % */
+}
+
+/* REMOVI O .form-cadastro-home DAQUI!
+   O estilo da caixa agora vai vir apenas do seu arquivo de formulário 
+   usando a classe .form-usuario que corrigimos antes.
+*/
+}

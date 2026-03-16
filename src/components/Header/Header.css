@@ -1,54 +1,90 @@
-/* 1. Limpa o visual dos links (tira o azul e o sublinhado) */
+/* Header sempre por cima da página */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+/* Limpa o visual dos links */
 .header a {
   text-decoration: none;
-  color: #fafafa; /* Cor escura profissional */
-  font-family: helvetica, regular;
+  color: #fafafa;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-/* 2. Alinha a Logo, o Menu e os Botões na mesma linha */
+/* Container da navegação */
 .nav {
   display: flex;
-  align-items: center;       /* Alinha tudo verticalmente no meio */
-  justify-content: space-between; /* Logo na esquerda, botões na direita */
+  align-items: center;
+  justify-content: space-between;
   padding: 10px 20px;
-  background-color: #442121 !important;
+  background-color: #442121;
 }
 
-/* 3. Organiza o menu do meio */
+/* Menu central */
 .Nav-menu {
   display: flex;
   list-style: none;
-  gap: 25px; /* Dá espaço entre Início, Usuários, etc */
+  gap: 25px;
   margin: 0;
   padding: 0;
 }
 
-/* 4. Estiliza os botões da direita */
+/* Links do menu */
+.Nav-menu li a {
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.Nav-menu li a:hover {
+  color: #4da3ff;
+}
+
+/* Botões da direita */
 .nav-buttons {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
+/* Botão entrar */
 .btn-entrar {
   background: transparent;
-  color: #ffffff !important;
+  color: #ffffff;
   border: 1px solid #ccc;
-  padding: 5px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.btn-cadastro {
-  background-color: #163b63; /* Azul padrão */
-  color: white !important;
   padding: 6px 15px;
   border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-/* 5. Garante que a imagem não cresça */
+.btn-entrar:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+/* Botão cadastrar */
+.btn-cadastro {
+  background-color: #163b63;
+  color: white;
+  padding: 6px 15px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+
+.btn-cadastro:hover {
+  background-color: #1f4f82;
+}
+
+/* Logo */
 .logo-link img {
   height: 45px;
   display: block;
 }
-
+.btn-entrar {
+  text-decoration: none; /* Remove o sublinhado */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* Mantenha o restante do seu estilo (border, padding, etc) */
+}

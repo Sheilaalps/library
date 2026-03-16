@@ -1,27 +1,26 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from "./components/Header"; // Importando seu Header novo
-import CadastroUsuario from "./pages/CadastroUsuario";
-import Usuarios from "./pages/Usuarios";
-import Emprestimos from "./pages/Emprestimos";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Home from "./pages/Home";
 import Livros from "./pages/Livros";
+import CadastroUsuario from "./pages/CadastroUsuario";
+import Admin from "./components/Admin/Admin"; // 1. Importe o componente Admin
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
-    <Router>
-      {/* O Header fica fora das Routes para aparecer em todas as páginas */}
-      <Header /> 
+    <BrowserRouter>
+      <Header />
 
-      {/* Removi o nav cinza antigo e o h1 solto para o layout ficar limpo */}
-      <main style={{ padding: "20px" }}>
-        <Routes>
-          <Route path="/" element={<Livros />} />
-          <Route path="/acervo" element={<Livros />} />
-          <Route path="/usuarios" element={<Usuarios />} />
-          <Route path="/cadastrar" element={<CadastroUsuario />} />
-          <Route path="/emprestimos" element={<Emprestimos />} />
-        </Routes>
-      </main>
-    </Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/acervo" element={<Livros />} />
+        <Route path="/cadastrar" element={<CadastroUsuario />} />
+        {/* 2. Adicione a rota para o painel administrativo */}
+        <Route path="/admin" element={<Admin />} /> 
+      </Routes>
+
+      <Footer />
+    </BrowserRouter>
   );
 }
 

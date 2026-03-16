@@ -3,20 +3,34 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #345e80; /* Cor que você está usando no header */
+  background-image: url("/background.jpg");
+  background-size: cover;
+  background-position: center;
+  /* Adicionei um padding para o card não encostar na borda em telas pequenas */
+  padding: 20px; 
 }
 
 .login-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  /* Efeito Vidro igual ao do início */
+  background: rgba(255, 255, 255, 0.15); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  
+  /* Borda sutil para o efeito brilhar */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  padding: 2.5rem;
+  border-radius: 16px; /* Bordas mais arredondadas ficam mais modernas */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  
   width: 100%;
   max-width: 400px;
   text-align: center;
+  color: white; /* Texto branco para destacar no vidro */
 }
 
 .login-card h1 {
   margin-bottom: 1.5rem;
-  color: #333;
+  color: white; /* Título também em branco */
+  font-size: 2rem;
 }

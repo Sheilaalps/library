@@ -12,14 +12,18 @@ function Header() {
         
         <ul className="Nav-menu">
           <li><Link to="/">Início</Link></li>
-          {/* Apontando para a rota de página /acervo */}
           <li><Link to="/acervo">Acervo</Link></li> 
         </ul>
 
         <div className="nav-buttons">
-          <button className="btn-entrar">Entrar</button>
+          {/* Trocamos o button por Link e apontamos para /admin */}
+          <Link to="/admin" className="btn-entrar">
+            Admin
+          </Link>
           <Link to="/cadastrar" className="btn-cadastro">Cadastre-se</Link>
         </div>
+
+        
       </nav>
     </header>
   );

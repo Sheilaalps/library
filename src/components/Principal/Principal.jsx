@@ -2,6 +2,7 @@ import React from "react";
 import "./Principal.css";
 import FormUsuario from "../FormUsuario/FormUsuario";
 import DelUsuario from "../DelUsuario/DelUsuario";
+import App from "../../App";
 
 function Principal() {
   return (

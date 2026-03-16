@@ -24,7 +24,7 @@ const [usuarios, setUsuarios] = useState([]); // Garanta o [] aqui
 
   return (
     <div className="lista-container">
-      <h3>Lista de Usuários Cadastrados</h3>
+
       
       {usuarios.length === 0 ? (
         <p>Nenhum usuário encontrado.</p>

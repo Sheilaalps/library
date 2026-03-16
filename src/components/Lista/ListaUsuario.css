@@ -1,0 +1,52 @@
+/* ==========================================================================
+   BOTÃO DE EXCLUIR REFINADO (DENTRO DA LISTA)
+   ========================================================================== */
+
+.btn-excluir-lista {
+    /* Estado Inicial */
+    background: transparent;
+    color: #ff4d4d;
+    border: 1px solid #ff4d4d;
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    
+    /* Transição suave para todas as propriedades */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+
+/* Estado de Hover (Ao passar o mouse) */
+.btn-excluir-lista:hover {
+    background-color: #ff4d4d;
+    color: #ffffff;
+    transform: translateY(-2px); /* Efeito de levante */
+    box-shadow: 0 4px 12px rgba(255, 77, 77, 0.3); /* Brilho vermelho */
+}
+
+/* Estado de Active (Ao clicar) */
+.btn-excluir-lista:active {
+    transform: translateY(0);
+    transform: scale(0.95); /* Efeito de clique */
+}
+
+/* Seletor específico caso você esteja usando o botão simples fora da tabela */
+.btn-excluir-simples {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-excluir-simples:hover {
+    background-color: #e63c3c;
+    box-shadow: 0 0 15px rgba(255, 77, 77, 0.4);
+}

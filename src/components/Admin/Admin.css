@@ -1,0 +1,186 @@
+/* ==========================================================================
+   RESET E FUNDO TOTAL
+   ========================================================================== */
+.admin-full-layout {
+  background-color: #1a1a1a;
+  min-height: 100vh; /* Ocupa a tela inteira */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin: 0;
+  padding: 0;
+  /* Removido o overflow: hidden para evitar que o conteúdo suma */
+}
+
+/* --- LOGIN (Centralizado e sem faixas brancas) --- */
+.admin-login-overlay {
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 60px 20px;
+}
+
+.admin-login-box {
+  background: #262626;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  width: 100%;
+  max-width: 380px;
+}
+
+.admin-login-box h2 {
+  color: #ff4d4d;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.admin-login-box input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: white;
+  outline: none;
+}
+
+.admin-login-box input:focus { border-color: #ff4d4d; }
+
+.admin-login-box button {
+  width: 100%;
+  padding: 14px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.admin-login-box button:hover { background: #e64040; }
+
+/* --- PAINEL INTERNO --- */
+.admin-container {
+  display: flex;
+  flex: 1;
+  /* Ajuste para o painel preencher o espaço entre header/footer do site */
+  min-height: calc(100vh - 140px); 
+  background-color: #1a1a1a;
+}
+
+.admin-sidebar {
+  width: 260px;
+  background-color: #0f0f0f;
+  border-right: 1px solid #333;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-logo h2 { color: #ff4d4d; font-size: 20px; }
+.admin-logo p { color: #666; font-size: 11px; margin-bottom: 40px; }
+
+.admin-menu ul { list-style: none; padding: 0; }
+.admin-menu li {
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #aaa;
+  transition: 0.2s;
+}
+
+.admin-menu li:hover, .admin-menu li.active {
+  background-color: #333;
+  color: white;
+  border-left: 4px solid #ff4d4d;
+}
+
+.menu-logout { margin-top: auto; color: #ff4d4d !important; font-weight: bold; }
+
+/* --- ÁREA PRINCIPAL (MAIN) --- */
+.admin-main {
+  flex: 1;
+  padding: 40px;
+  background-color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- HEADER DO DASHBOARD (Onde fica seu nome) --- */
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Alinha o nome e o botão na mesma linha */
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;    
+}
+
+/* ==========================================================================
+   AJUSTE DE POSICIONAMENTO (CONTEÚDO VISÍVEL)
+   ========================================================================== */
+
+.admin-main {
+    flex: 1;
+    padding: 60px 40px; /* Aumentei o primeiro valor para 60px para empurrar tudo para baixo */
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Garante que o Header interno (onde está seu nome) tenha espaço */
+.admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #333;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    margin-top: 20px; /* Adicionado para garantir que Sheila Araújo apareça */
+}
+
+.admin-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #ffffff;
+}
+
+.admin-profile span {
+    font-size: 18px; /* Nome um pouco maior para destaque */
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Ajuste do Card da Lista para não grudar no nome */
+.card-lista {
+    background: #262626;
+    border-radius: 16px;
+    padding: 30px;
+    margin-top: 10px;
+    border: 1px solid #333;
+}
+.btn-logout {
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
