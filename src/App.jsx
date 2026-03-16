@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from "./components/Header"; // Importando seu Header novo
 import CadastroUsuario from "./pages/CadastroUsuario";
 import Usuarios from "./pages/Usuarios";
 import Emprestimos from "./pages/Emprestimos";
@@ -7,24 +8,19 @@ import Livros from "./pages/Livros";
 function App() {
   return (
     <Router>
-      <div>
-        <nav style={{ padding: "20px", background: "#eee", marginBottom: "20px" }}>
-          <Link to="/" style={{ marginRight: "10px" }}>Livros</Link>
-          <Link to="/usuarios" style={{ marginRight: "10px" }}>Ver Usuários</Link>
-          <Link to="/cadastrar" style={{ marginRight: "10px" }}>Novo Usuário</Link>
-          <Link to="/emprestimos">Empréstimos</Link>
-        </nav>
+      {/* O Header fica fora das Routes para aparecer em todas as páginas */}
+      <Header /> 
 
-        <h1>Sistema Biblioteca</h1>
-
+      {/* Removi o nav cinza antigo e o h1 solto para o layout ficar limpo */}
+      <main style={{ padding: "20px" }}>
         <Routes>
-          {/* Aqui o React decide qual componente mostrar baseado na URL */}
           <Route path="/" element={<Livros />} />
+          <Route path="/acervo" element={<Livros />} />
           <Route path="/usuarios" element={<Usuarios />} />
           <Route path="/cadastrar" element={<CadastroUsuario />} />
           <Route path="/emprestimos" element={<Emprestimos />} />
         </Routes>
-      </div>
+      </main>
     </Router>
   );
 }

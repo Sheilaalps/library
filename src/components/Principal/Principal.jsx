@@ -22,12 +22,6 @@ function Principal() {
           </div>
         </div>
       </section>
-
-      {/* AREA PARA EXCLUIR USUARIO */}
-      <section style={{ padding: "40px", textAlign: "center" }}>
-        <DelUsuario />
-      </section>
-
     </main>
   );
 }
